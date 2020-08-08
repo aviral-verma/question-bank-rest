@@ -1,0 +1,34 @@
+ // creatinng a questionbank
+
+ create TABLE angular(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        questions VARCHAR(500) NOT NULL,
+        A VARCHAR(100),
+        B VARCHAR(100),
+        C VARCHAR(100),
+        D VARCHAR(100),
+        Answer VARCHAR(5)
+ );
+
+
+// inserting into a questionbank
+INSERT INTO newdemo(
+        questions,
+        A,
+        B,
+        C,
+        D,
+        Answer
+ ) VALUES('What is NgRx', 'State Management Library', 'Frontend Framework', 'Runtime environment', 'Cascading Style Sheet', 'A');
+
+
+ // creating a list of question banks
+
+  create TABLE questionbank_tb(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        questionbank_list VARCHAR(100) NOT NULL
+ );
+
+ insert into questionbank_tb(
+     questionbank_list
+ ) VALUES('Angular');
