@@ -1,6 +1,6 @@
  // creatinng a questionbank
 
- create TABLE angular(
+ create TABLE allquestions_tb(
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         questions VARCHAR(500) NOT NULL,
         A VARCHAR(100),
@@ -12,7 +12,7 @@
 
 
 // inserting into a questionbank
-INSERT INTO newdemo(
+INSERT INTO allquestions_tb(
         questions,
         A,
         B,
@@ -31,4 +31,16 @@ INSERT INTO newdemo(
 
  insert into questionbank_tb(
      questionbank_list
+ ) VALUES('Angular');
+
+
+  // creating a list of question papers
+
+  create TABLE questionpaper_tb(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        questionpaper_list VARCHAR(100) NOT NULL
+ );
+
+  insert into questionpaper_tb(
+     questionpaper_list
  ) VALUES('Angular');

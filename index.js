@@ -21,6 +21,7 @@ app.use(require('./middlewares/auth.js'));
 
 // register a handler (listener) for GET (http method) for '/questionbanks' URL
 app.get('/questionbanks', require('./handlers/get-all-questionbanks'));
+app.get('/questionpapers', require('./handlers/get-all-questionpapers'));
 app.post('/questionbanks/:name', require('./handlers/add-new-questionbank'));
 app.get('/questionbanks/:questionId', require('./handlers/get-one-questionbank'));
 app.post('/questionbanks/questionb/:name', require('./handlers/add-new-question'));

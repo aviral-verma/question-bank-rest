@@ -9,6 +9,12 @@ module.exports = (req, res) => {
        
      (err) => {
         if(err) throw err; // results in HTTP response code 500
+        conn.query(
+            `insert into allquestions_tb(questions,A,B,C,D,Answer) VALUES('${req.body.questions}','${req.body.A}','${req.body.B}','${req.body.C}','${req.body.D}','${req.body.Answer}')`,
+            (err) => {
+                if(err) throw err;
+            }
+        )
         res.end(); //ends the response and sends HTTP response code 200 without any content
     }
         );
